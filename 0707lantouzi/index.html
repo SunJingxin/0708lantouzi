@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+ <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+ <link rel="stylesheet" type="text/css" href="css/footer.css"/>
+ <link rel="stylesheet" type="text/css" href="css/top.css"/>
+ <script src="js/jquery.js"></script>
+ <script src="js/angular.min.js"></script>
+ <script src="js/angular-route.min.js"></script>
+ <title>懒投资</title>
+<script>
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = (clientWidth/16).toFixed(1) + 'px';
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+        //640px时1rem是40px
+    </script>
+</head>
+<body>
+  <div class="header" ng-controller="indexCtrl">
+	   <ul class="header-ul">
+	  	<li></li>
+	  	<li></li>
+	    <li></li>
+	   </ul>
+	  <span>定期·懒人计划</span>
+	  <img src="img/lingqian/images/2_03.png"/>
+	  <img src="img/lanren/images/1_03.png"/>
+   </div>    
+   <div id="tc" ng-view>
+     <!--路由的内容-->
+   </div>
+	<!--底部-->
+   <div class="footer" ng-controller="indexCtrl">
+	 	<a href="#/lanren">
+	 		<img src="img/images/footer1a.png"/>
+	 		<span class="footer-span">懒人计划</span>
+	 	</a>
+	 	<a href="#/lingqian">
+	 		<img src="img/images/footer2b.png"/>
+	 		<span>零钱计划</span>
+	 	</a>
+	 	<a href="#/middle0">
+	 		<img src="img/images/footer3b.png"/>
+	 		<div class="footerm">	 			
+	 		</div>
+	 	</a>
+	 	<a href="#/xiangle">
+	 		<img src="img/images/footer4b.png"/>
+	 		<span>享乐计划</span>
+	 	</a>
+	 	<a href="#/jifen">
+	 		<img src="img/images/footer5b.png"/>
+	 		<span>积分商城</span>
+	 	</a>
+   </div>
+   <!--<script src="js/footer.js"></script>-->
+   <script src="app.js"></script>
+   <script src="controllers.js"></script>
+   </body>
+</html>

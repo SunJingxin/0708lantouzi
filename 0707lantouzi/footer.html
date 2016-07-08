@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+ <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<script src="js/jquery.js"></script>
+ <title>平安银行</title>
+<script>
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = (clientWidth/16).toFixed(1) + 'px';
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+        //640px时1rem是40px
+    </script>
+</head>
+<style type="text/css">
+.footer{
+  width: 100%;
+  height: 2.4rem;
+  background-color: #FFFFFF;
+  font-size:0 ;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom:0.1rem;
+  border-top:0.025rem solid #EAEAEA ;
+}
+.footer li{
+  display: inline-block;
+  width: 20%;
+  font-size:0.475rem;
+  color: #333333;
+  height: 2.4rem;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+/*  background-color: #333333;*/
+}
+.footer li img{
+  width: 1.2rem;
+  height: 1.35rem;
+  margin: 0.25rem 0 0 0.975rem;
+}
+.footer li span{
+  margin: 0.10rem 0 0 0.64rem;
+}
+.footer li .footer-span{
+  color: #FB7540;
+}
+.footer li .footerm{
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #FF9966;
+  /*margin: 0.2rem 0 0 0.6rem;*/
+  top: 0.2rem;
+  left: 0.6rem;
+  overflow: hidden;
+}
+.footer li:nth-of-type(3)  img{
+  position: absolute;
+  /*margin: 0.30rem 0 0 0.41rem;*/
+  top: 0.3rem;
+  left: 0rem;
+  z-index: 1;
+}
+</style>
+	<body>
+	 <ul class="footer">
+	 	<li>
+	 		<img src="img/images/footer1a.png"/>
+	 		<span class="footer-span">懒人计划</span>
+	 	</li>
+	 	<li>
+	 		<img src="img/images/footer2b.png"/>
+	 		<span>零钱计划</span>
+	 	</li>
+	 	<li>
+	 		<img src="img/images/footer3b.png"/>
+	 		<div class="footerm">	 			
+	 		</div>
+	 	</li>
+	 	<li>
+	 		<img src="img/images/footer4b.png"/>
+	 		<span>享乐计划</span>
+	 	</li>
+	 	<li>
+	 		<img src="img/images/footer5b.png"/>
+	 		<span>积分商城</span>
+	 	</li>
+	 </ul>
+	 <script>
+	 $("ul li").click(function(e){
+	 	var oImg=$(this).children()[0]
+	 	var oSpan=$(this).children()[1]
+	 var allImg=$("ul li img");
+	 var allSpan=$("ul li span");
+	 for(var i=0;i<allImg.length;i++){
+	 	//for 实现点击全部图片 褪色
+	 	var imga=allImg[i].src.slice(-5,-4);
+	 	if(imga=="a"){
+	 	 var heimg=i+1;
+	 	 console.log(heimg);
+	 	  allImg[i].src= "img/images/footer"+heimg+"b.png";	 	  
+	 	}	 
+	 	//实现 文字去色
+	 	if(i<allImg.length-1){
+	 	  allSpan[i].style.color="#666666";
+	 	}
+	  }
+	 var heimg1=$(this).index()+1;
+	 oImg.src="img/images/footer"+heimg1+"a.png";
+	 oSpan.style.color="#FB7540";
+	 var footerm=$(".footerm")[0];
+	 //处理中间背景颜色
+	 if($(this).index()==2){
+	 	footerm.style.backgroundColor="#FF6633"
+	  }
+	 if($(this).index()!=2){
+	 	footerm.style.backgroundColor="#FF9966";
+	  }
+	 })	 
+	 </script>
+	</body>
+</html>

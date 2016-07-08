@@ -1,0 +1,260 @@
+body{
+  background-color: #F5F5F5;
+}
+.top{
+  width: 16rem;
+  height: 6.425rem;
+  overflow: hidden;
+}
+.topView{
+  width: 16rem;
+  height: 6.425rem;
+  overflow: hidden;
+  position: relative;
+}
+.topLa{
+  width: 64rem;
+  height: 6.425rem;
+  font-size: 0;  
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.topLa img{
+  width: 16rem;
+  height: 6.425rem;
+  display: inline-block;
+}
+.top ul {
+  font-size:0 ;
+  position: absolute;
+  top: 7.5rem;
+  left: 6rem;
+}
+.top ul li{
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius:50%;
+  background-color: #C3C3C8;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.top ul .top-ul-li{
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius:50%;
+  border:0.1rem solid #E64E55 ; 
+  background: none;
+}
+.banner{
+  font-size: 0;
+  width: 16rem;
+  height: 3rem;
+  overflow: hidden;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+.bannerView{
+  width: 60rem;
+  height: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bannerView a {
+  display: inline-block;
+  width: 3.5rem;
+  height: 3rem;	
+  overflow: hidden;
+  text-align: center;
+}
+.bannerView a img{
+  width: 1.4rem;
+  height: 1.4rem;
+  margin: 0.5rem 0 0 1.05rem;
+}
+.bannerView a span{
+  font-size: 0.6rem;
+  color: #666666;
+  margin-top:0.175rem ;
+}
+.topN{
+  margin-top:0.425rem;
+  width: 100%;
+  height: 9.2rem;
+  border-bottom:0.025rem solid #F1F1F1 ;
+  background-color: #EEEEEE;
+}
+.topNLeft{
+  display: block;
+  float: left;
+  width: 25%;
+  height: 9.15rem; 
+  background-image: url(../img/xiangle/images/left.png);
+  background-size: 4rem 9.15rem;
+}
+.topNLeft a{
+  display: block;
+  font-size: 0.575rem;
+  text-align: center;
+  width: 3.8rem;
+  height: 1.2rem;
+  margin:7.6rem 0.1rem 0 0.1rem ;
+  color: white;
+  line-height: 1.2rem;
+  border-radius: 0.6rem;
+  background-color: rgba(0,0,0,0.5);
+}
+.topN>a:nth-of-type(1){
+  /*display: block;*/
+  float: right;
+  height: 4.55rem;
+  width: 75%;
+  background-color: white;
+  margin-bottom:0.05rem ;
+}
+.topN>a:nth-of-type(1) img{
+  width: 2.6rem;
+  height: 1.6rem;
+  float: right;
+  margin:0rem 1.125rem 0 0 ;
+}
+.topN>a:nth-of-type(2) img{
+  width: 2.6rem;
+  height: 2.6rem;
+  margin: 0.4rem 0 0 1.725rem;
+}
+.topN>a:nth-of-type(3) img{
+  width: 2.6rem;
+  height: 2.6rem;
+   margin: 0.4rem 0 0 1.725rem;
+}
+.topN>a:nth-of-type(1) span:nth-of-type(1){
+  font-size: 0.575rem;
+  color: #000000;
+}
+.topN>a:nth-of-type(1) span:nth-of-type(2){
+  font-size: 0.475rem;
+  color: #999999;
+}
+.topN>a:nth-of-type(2){
+  /*display: block;*/
+  float: right;
+  height: 4.55rem;
+  width: 37%;
+  background-color: white;
+  margin-bottom:0.05rem ;
+  margin-left:0.1rem ;
+}
+.topN>a:nth-of-type(2) span:nth-of-type(1){
+  font-size: 0.575rem;
+  color: #000000;
+}
+.topN>a:nth-of-type(2) span:nth-of-type(2){
+  font-size: 0.475rem;
+  color: #999999;
+}
+.topN>a:nth-of-type(3){
+  /*display: block;*/
+  float: right;
+  height: 4.55rem;
+  width: 37%;
+  background-color: white;
+  margin-bottom:0.05rem ;
+}
+.topN>a:nth-of-type(3) span:nth-of-type(1){
+  font-size: 0.575rem;
+  color: #000000;
+}
+.topN>a:nth-of-type(3) span:nth-of-type(2){
+  font-size: 0.475rem;
+  color: #999999;
+}
+.leisi{
+  width: 16rem;
+  height: 14.55rem;
+  background-color: #F1F1F1;
+  font-size: 0;
+  margin:0.5rem 0; 
+}
+.leisi>div{
+  width: 16rem;
+  height: 6.9rem;
+  position: relative;
+}
+.leisi>div>img{
+  width: 16rem;
+  height: 6.9rem;
+}
+.leisi>div>a{
+  position: absolute;
+  left:12.4rem;
+  top: 5.525rem;
+  font-size: 0.575rem;
+  color: white;
+}
+.leisi>a{
+  display: inline-block;
+  width: 33.2%;
+  height: 7.725rem;
+  text-align: center;
+  background-color: #FFFFFF;
+}
+.leisi>a:nth-of-type(1){
+  margin-right: 0.2%;
+}
+.leisi>a:nth-of-type(2){
+  margin-right: 0.2%;	
+}
+.leisi>a span:nth-of-type(1){
+  font-size:0.575rem ;
+  margin-top: 0.575rem;
+  color: #000000;
+}
+.leisi>a span:nth-of-type(2){
+  font-size:0.475rem ;
+  margin-top: 0.25rem;
+}
+.leisi>a img:nth-of-type(1){
+  margin:0.975rem 0 0 1.05rem; 
+  width: 4.1rem;
+  height: 3.35rem;
+
+}
+.leisi>a img:nth-of-type(2){
+  width: 1.775rem;
+  height: 0.725rem;
+  margin:0.325rem 0.35rem 0 0.35rem; 
+  display: inline-block;
+}
+.leisi>a span:nth-of-type(3){
+
+  margin-top: 10px;
+  font-size: 0.5rem;
+  display: inline-block;
+  color: #000000;
+  height: 0.725rem;
+  line-height: 0.725rem;
+}
+.leisi>a span:nth-of-type(4){
+ height: 0.725rem;
+ line-height: 0.725rem;
+ font-size: 0.5rem;
+ display: inline-block;
+ color: #7B7B7B; 
+}
+.weiyi{
+  width: 16rem;
+  height: 3.15rem;
+  margin: 0.35rem 0;
+}
+.weiyi img{
+  width: 16rem;
+  height: 3.15rem;
+}
+.main{
+  width: 16rem;
+  min-height: 1rem;
+  margin-bottom: 2.9rem;	
+}

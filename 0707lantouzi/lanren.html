@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+ <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<script src="js/jquery.js"></script>
+ <title>平安银行</title>
+<script>
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = (clientWidth/16).toFixed(1) + 'px';
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+        //640px时1rem是40px
+    </script>
+</head>
+<style type="text/css">
+.header{
+  width: 100%;
+  height: 2.075rem;
+  background-color: #232628;
+  overflow: hidden;
+}
+.header-ul {
+  margin: 0.5rem 0 0 0.8rem;
+  float: left;
+  
+}
+.header-ul li{
+  width: 1.25rem;
+  height: 0.15rem;
+  margin-bottom: 0.25rem;	
+  background-color: #FFFFFF;
+  border-radius:0.05rem ;
+}
+.header span{
+  float: left;
+  font-size:0.85rem ;
+  color: #FFFFFF;
+  margin: 0.55rem 0 0  3.225rem;
+  font-weight:800 ;
+}
+.header img{
+  width: 1.05rem;
+  height: 1.025rem;
+  float: right;
+  margin: 0.5rem 0.875rem 0 0;
+  
+}
+.nav{
+  width: 100%;
+  height: 2.25rem;
+  background-color: #F5F5F5;
+  font-size: 0;
+}
+.nav>li{
+  width: 25%;
+  display: inline-block;
+  font-size: 0.675rem;
+  color: #666666;
+}
+.nav>li>a{
+  display: block;
+  width: 2.825rem;
+  height: 2.125rem;
+  border-top:0.1rem solid  #F5F5F5;
+  line-height: 2.125rem;
+  margin-left: 0.6rem;
+}
+.nav .navLiA{
+  border-top:0.1rem solid  #F87547;
+  color: #F87547;
+}
+.main{
+  width: 16rem;
+  min-height: 1rem;
+  position: relative;
+}
+.yuan{
+  width: 11.45rem;
+  height: 11.45rem;
+  border-radius:50%;
+  border: 0.175rem solid  #FE8259;
+  margin:0 auto; 
+  margin-top:0.75rem; 
+  text-align: center;
+  font-size: 0;
+
+}
+.yuan>img{
+ width: 2.775rem;
+ height: 2.35rem;
+ position: absolute;
+ top: 1rem;
+ right: 0;
+}
+.yuan>span:nth-of-type(1){
+	font-size: 0.625rem;
+  color: #000000;
+  margin-top: 1.6rem;
+}
+.yuan>span:nth-of-type(2){
+ font-size: 2.325rem;
+  color: #FB7540;
+  display: inline-block;
+  margin-top: 1.0rem;
+  height: 2.325rem;
+  line-height: 2.325rem;
+	
+}
+.yuan>span:nth-of-type(3){
+  font-size: 0.625rem;
+  color: #FB7540;
+	display: inline-block;
+}
+.yuanshang{
+  width: 16rem;
+  height: 2.5rem;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 6.1rem;
+  left: 0;
+  text-align: center;
+  font-size: 0;
+  line-height: 2.5rem;
+
+}
+.yuanshang a{
+  display: inline-block;
+  font-size: 0.65rem;
+  margin-right: 0.825rem;
+  width: 3.7rem;
+  height: 1.3rem;
+  background-color: #FB7540;
+  color: #FFFFFF;
+  line-height: 1.3rem;
+  text-align: center;
+  border-radius: 0.15rem;
+}
+.yuanshang a:nth-of-type(1){
+  margin-left:0.45rem; 
+  background-color: #FF9933;
+}
+.yuanshang1{
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius:0.15rem;
+  background-color:#FF9933;
+  position: absolute;
+  top: 0.25rem;
+  left: 0.4rem;
+}
+.yuanshang1 img{
+  width: 1.025rem;
+  height: 1.15rem;
+  margin: 0 auto;
+  margin-top:0.2rem; 
+}
+.e{
+  width: 16.0rem;
+  height: 2.25rem;  
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.e a{
+  flex-grow: 1;
+  text-align: center;
+  height: 2.25rem;
+}
+.e> a:nth-of-type(1){
+  border-right:0.1rem dashed #CCCCCC;
+}
+.e a span{
+  font-size: 0.75rem;
+  display: inline-block;
+}
+.e a span:nth-of-type(1){
+  font-size:0.8rem;
+  color:#FB7540 ;
+}
+
+.end{
+  display: block;
+  width: 14.0rem;
+  height: 2.025rem;
+  background-color: #FB7540;
+  margin:0 auto; 
+  margin-top: 1.3rem;
+  text-align: center;
+  line-height: 2.025rem;
+  color: #FFFFFF;
+  border-radius: 0.275rem;
+  font-size: 0.775rem;
+  margin-bottom: 4.4rem;
+}
+</style>
+	<body>
+	  <div class="header">
+	  	<ul class="header-ul">
+	  		<li></li>
+	  		<li></li>
+	  		<li></li>
+	  	</ul>
+	  	<span>定期·懒人计划</span>
+	  	<img src="img/lanren/images/1_03.png"/>
+	  </div>
+	  <ul class="nav">
+	  	<li>
+	  		<a class="navLiA">明星产品</a>
+	  	</li>
+	  	<li>
+	  		<a>短期灵活</a>
+	  	</li>
+	  	<li>
+	  		<a>中期稳健</a>
+	  	</li>
+	  	<li>
+	  		<a>长期猛赚</a>
+	  	</li>
+	  </ul>
+	  <div class="main">
+	  	<div class="yuan">
+	  		<span>年化收益率</span>
+	  		<span>8.50</span>
+	  		<span>%</span><br />
+	  		<img src="img/lanren/images/lr1_03.png" />
+	  	</div>
+	  	<div class="yuanshang">
+	  		<a href="#">首投加息</a>
+	  		<a href="#">明星产品</a>
+	  		<a href="#">小懒投资</a>
+	  		<div class="yuanshang1">
+	  		  <img src="img/lanren/images/lr1_06.png"/>
+	  	    </div>	  		
+	  	</div>	  	
+	  	<div class="e">
+        <a href="#">
+          <span>2</span>
+          <span>个月</span><br />
+          <span>项目期限</span>
+        </a>
+        <a href="#">
+          <span>185.37万</span>
+          <span>元</span><br />
+          <span>项目余额</span>
+        </a>
+      </div>
+      <a href="#" class="end">马上投资</a>
+	  </div>
+	</body>
+</html>

@@ -1,0 +1,148 @@
+
+.nav{
+  width: 100%;
+  height: 2.25rem;
+  background-color: #F5F5F5;
+  font-size: 0;
+}
+.nav>li{
+  width: 25%;
+  display: inline-block;
+  font-size: 0.675rem;
+  color: #666666;
+}
+.nav>li>a{
+  display: block;
+  width: 2.825rem;
+  height: 2.125rem;
+  border-top:0.1rem solid  #F5F5F5;
+  line-height: 2.125rem;
+  margin-left: 0.6rem;
+}
+.nav .navLiA{
+  border-top:0.1rem solid  #F87547;
+  color: #F87547;
+}
+.main{
+  width: 16rem;
+  min-height: 1rem;
+  position: relative;
+}
+.yuan{
+  width: 11.45rem;
+  height: 11.45rem;
+  border-radius:50%;
+  border: 0.175rem solid  #FE8259;
+  margin:0 auto; 
+  margin-top:0.75rem; 
+  text-align: center;
+  font-size: 0;
+
+}
+.yuan>img{
+ width: 2.775rem;
+ height: 2.35rem;
+ position: absolute;
+ top: 1rem;
+ right: 0;
+}
+.yuan>span:nth-of-type(1){
+	font-size: 0.625rem;
+  color: #000000;
+  margin-top: 1.6rem;
+}
+.yuan>span:nth-of-type(2){
+ font-size: 2.325rem;
+  color: #FB7540;
+  display: inline-block;
+  margin-top: 1.0rem;
+  height: 2.325rem;
+  line-height: 2.325rem;
+	
+}
+.yuan>span:nth-of-type(3){
+  font-size: 0.625rem;
+  color: #FB7540;
+	display: inline-block;
+}
+.yuanshang{
+  width: 16rem;
+  height: 2.5rem;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 6.1rem;
+  left: 0;
+  text-align: center;
+  font-size: 0;
+  line-height: 2.5rem;
+
+}
+.yuanshang a{
+  display: inline-block;
+  font-size: 0.65rem;
+  margin-right: 0.825rem;
+  width: 3.7rem;
+  height: 1.3rem;
+  background-color: #FB7540;
+  color: #FFFFFF;
+  line-height: 1.3rem;
+  text-align: center;
+  border-radius: 0.15rem;
+}
+.yuanshang a:nth-of-type(1){
+  margin-left:0.45rem; 
+  background-color: #FF9933;
+}
+.yuanshang1{
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius:0.15rem;
+  background-color:#FF9933;
+  position: absolute;
+  top: 0.25rem;
+  left: 0.4rem;
+}
+.yuanshang1 img{
+  width: 1.025rem;
+  height: 1.15rem;
+  margin: 0 auto;
+  margin-top:0.2rem; 
+}
+.e{
+  width: 16.0rem;
+  height: 2.25rem;  
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.e a{
+  flex-grow: 1;
+  text-align: center;
+  height: 2.25rem;
+}
+.e> a:nth-of-type(1){
+  border-right:0.1rem dashed #CCCCCC;
+}
+.e a span{
+  font-size: 0.75rem;
+  display: inline-block;
+}
+.e a span:nth-of-type(1){
+  font-size:0.8rem;
+  color:#FB7540 ;
+}
+
+.end{
+  display: block;
+  width: 14.0rem;
+  height: 2.025rem;
+  background-color: #FB7540;
+  margin:0 auto; 
+  margin-top: 1.3rem;
+  text-align: center;
+  line-height: 2.025rem;
+  color: #FFFFFF;
+  border-radius: 0.275rem;
+  font-size: 0.775rem;
+  margin-bottom: 4.4rem;
+}
