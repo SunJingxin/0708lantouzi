@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+ <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+ <title>懒投资</title>
+<script>
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = (clientWidth/16).toFixed(1) + 'px';
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+        //640px时1rem是40px
+    </script>
+</head>
+<script src="js/baiduTemplate.js"></script>
+<style type="text/css">
+.bigBox{
+  width: 16.0rem;
+  min-height: 1rem;
+}
+.Dtop{
+  width: 16rem;
+  height: 2.225rem;
+  background-color:#232628; 
+  overflow: hidden;
+  text-align: center;
+  line-height: 2.225rem;
+}
+.Dtop ul{
+  margin: 0.675rem 0 0 0.55rem;
+  float: left;
+}
+.Dtop ul li{
+  width: 1.105rem;
+  height: 0.075rem;
+  margin-bottom: 0.7rem;
+  background-color: #ffffff;
+}
+.Dtop ul li:nth-of-type(1){
+  transform: rotate(-45deg);
+  transform-origin: right;
+}
+.Dtop ul li:nth-of-type(2){
+  transform: rotate(45deg);
+  transform-origin: right;
+}
+.Dtop span{
+  color: white;
+  display: inline;
+  font-size: 0.8rem;
+}
+.Dtop img{
+  float: right;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin:0.475rem 0.675rem 0 0; 
+}
+.form1{
+  margin: 0 0.75rem;
+  position: relative;
+}
+.form1Div1{
+  overflow: hidden;
+  height: 3.45rem;
+  border-bottom:0.025rem solid #f4f4f4 ;
+}
+.form1Div2{
+  overflow: hidden;
+  height: 3.45rem;
+  border-bottom:0.025rem solid #f4f4f4 ;
+}
+.form1 img{
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.95rem;
+  margin-top:2.0rem; 
+  float: left;
+}
+.form1 img:nth-of-type(3){
+  display: block;
+  width: 1.725rem;
+  height: 0.85rem;
+  position: absolute;
+  top: 5.55rem;
+  right:0.01rem;
+}
+.form1 input[type="text"]{
+  margin-top: 1.5rem;
+  width: 12.0rem;
+  height: 2rem;
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+  border: none;
+}
+.form1 button{
+  width: 14.5rem;
+  height: 2.05rem;
+  background-color: #FB7540;
+  border-radius: 0.175rem;
+  margin-top: 1.75rem;
+  font-size: 0.825rem;
+  color: #ffffff;
+  line-height: 2.05rem;
+  text-align: center; 
+  border:none; 
+}
+.form1>img{
+  position: absolute;
+  top: 5.525rem;
+  left: 12.85rem;
+  margin-top: 0.0rem;
+  width: 1.725rem;
+  height: 0.85rem;
+}
+.yzDiv{
+  margin-top: 1.15rem;
+  font-size: 0rem;
+  text-align: center;
+}
+.yzDiv a {
+  display: inline-block;
+  font-size: 0.65rem;
+  height: 0.75rem;
+  line-height: 0.75rem;
+  margin-left: 0.8rem;
+}
+.yzDiv a:nth-of-type(1){
+  border-right: 0.05rem solid #EEEEEE;
+  /*margin-right: 0.8rem;*/
+  padding-right:0.8rem; 
+}
+</style>
+	<body>
+      <div class="DbigBox">
+        <div class="Dtop">
+        	<ul>
+        		<li></li>
+        		<li></li>
+        	</ul>
+        	<span>登录</span>
+        	<img  src="img/denglu/images/IMG_4677_03.png"/>
+        </div>
+        <div id="Dyz">
+        	
+        </div>
+      </div>
+      <script id="tc" type="text/html">
+      	<form class="form1">
+      		<div class="form1Div1">
+      			 <% if(data.ren!=""){ %>
+      	     	 <img src="img/denglu/images/IMG_4677_07.png" />
+      	   	     <input type="text" placeholder="<%=data.ren%>"/>
+      	         <%}%>
+      		</div>
+      	    <div class="form1Div2">
+      	    	 <% if(data.suo!=""){%>
+      	   	    <img src="img/denglu/images/IMG_4677_10.png" />
+      	        <input type="text" placeholder="<%=data.suo%>"/>
+      	        <%}%>
+      	    </div>
+      	   <img src="img/denglu/images/IMG_4677_12.png" />
+      	   <button><%=data.denglu%></button>
+      	   <div class="yzDiv">
+      	   	  <a href="#"><%=data.mes1%></a>
+      	   	  <a href="#"><%=data.mes2%></a>
+      	   </div>
+      	</form>      	
+      </script>
+      <script type="text/javascript">
+      	var data={
+      	    "ren":"请输入手机号/用户名/邮箱",
+      	    "suo":"请输入登录密码",
+      	    "denglu":"登录",
+      	    "mes1":"忘记密码",
+      	    "mes2":"注册送大礼"
+      	}
+      	var bt=baidu.template;
+      	var html=bt("tc",data);
+      	document.getElementById("Dyz").innerHTML=html;
+      </script>
+	</body>
+</html>

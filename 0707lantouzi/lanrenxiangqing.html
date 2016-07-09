@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+ <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+ <title>懒投资</title>
+<script>
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = (clientWidth/16).toFixed(1) + 'px';
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+        //640px时1rem是40px
+    </script>
+    <!--header footer-->
+</head>
+<style type="text/css">
+.top{
+  width: 16rem;
+  height: 2.25rem;
+  background-color: #232628;
+  /*text-align: center;*/
+  line-height: 2.25rem;
+  color: #ffffff;
+}
+.top span{
+  display: inline-block;
+}
+.top span:nth-of-type(1){
+  width: 0.65rem;
+  height: 0.65rem;
+  border-top:0.15rem solid #ffffff;
+  border-right:0.15rem solid #ffffff;
+  transform: rotate(-135deg);
+  display: block;
+  float: left;
+  margin: 0.7rem 0 0 0.425rem;
+  
+}
+.top img{
+  width: 1.2rem;
+  height: 1.2rem;
+  float: right;
+  margin:0.5rem 0.7rem 0 0 ; 
+}
+.main{
+  width: 16rem;
+  min-height: 1rem;
+  overflow: hidden;
+  text-align: center;
+  font-size: 0;
+  position: relative;
+}
+.main p{
+  margin:0.925rem 0 0 0.525rem; 
+  font-size: 0.625rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  border-left:0.2rem solid red; 
+  padding-left:0.3rem; 
+  text-align: left;
+}
+.main>span:nth-of-type(1){
+  display: inline-block;
+  font-size: 1.875rem;
+  color: #FB7540;
+  margin-top:1.225rem; 
+}
+.main>span:nth-of-type(2){
+  display: inline-block;
+  font-size: 0.575rem;
+}
+.main>span:nth-of-type(3){
+  font-size: 0.575rem;
+  color: #666666;
+}
+.mainUl{
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 0.55rem;
+  font-size: 0;
+}
+.mainUl li{
+  display: inline-block;
+  width: 3.825rem;
+  height: 1.4rem;
+  background-color: #FB7540;
+  border-radius: 0.175rem;
+  text-align: center;
+  line-height: 1.4rem;
+  color: #ffffff;
+  margin-left: 0.825rem;
+  font-size: 0.75rem;
+}
+.mainUl li:nth-of-type(1){
+  background-color: #FF9933;
+}
+.main a{
+  display: block;
+  font-size: 0.575rem;
+  color: #ffffff;
+  background-color:#FF9A66;
+  margin-top:0.5rem; 
+  width: 100%;
+  height: 1.775rem;
+  line-height: 1.775rem;
+  position: relative;
+}
+.main>a>span{
+  font-size: 0.9rem;
+  color: #ffffff;
+  display: inline;
+}
+.main>a>p{
+	/*position: absolute;
+	top: 0;
+	right: 0;
+	width: 0.65rem;
+	height: 0.65rem;
+	border-radius:50%;
+	border:#ffffff solid 0.07rem;  */
+
+}
+.main>a>p>span{
+	/*position: absolute;
+	top: 0;
+	right: 0;
+	width: 0.15rem;
+	height: 0.15rem;
+	border-radius:50%;
+	border:#ffffff solid 0.07rem;  */
+}
+.mainDiv{
+  position: absolute;
+  top: 6.15rem;
+  left: 0.705rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: #FF9933;
+  border-radius:0.2rem; 
+  overflow: hidden;
+}
+.mainDiv img{
+  width: 1.025rem;
+  height:1.15rem;
+  margin:0 auto;
+  margin-top:0.2rem;  
+}
+.xiangmu{
+  width: 16rem;
+  min-height: 1rem;
+  background-color: #ffffff;
+}
+.xiangmuTou{
+  width: 16rem;
+  height: 2.2rem;
+  background-color: #F5F5F5;
+  display: flex;
+  line-height: 2.2rem;
+}
+.xiangmuTou li{
+  flex-grow: 1;
+  font-size: 0.65rem
+}
+.xiangmuTou li span{
+ /*background-color: red;*/
+ text-align: center;
+ width: 2.9rem;
+ margin:0 auto; 
+ border-bottom:0.05rem solid #F5F5F5; 
+}
+.xiangmuTou li .xiangmuTou-li-span{
+ border-bottom:0.05rem solid red; 
+ color: #F87547;	
+}
+.xiangmuBody{
+  padding: 0 1.25rem;
+}
+.xiangmuBody p {
+  height: 2.075rem;
+  font-size: 0.7rem;
+  line-height: 2.075rem;
+}
+.xiangmuBody p:nth-of-type(1) span:nth-of-type(2){
+color: #FB7540;
+}
+
+.xiangmuBody p span:nth-of-type(1){
+   float: left;
+}
+.xiangmuBody p span:nth-of-type(2){
+   float: right;
+}
+.end{
+  display: block;
+  width: 100%;
+  height: 2.0rem;
+  background-color: #FB7540;
+  color: #ffffff;
+  text-align: center;
+  line-height: 2.0rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+</style>
+	<body>
+	 <div class="bigBox">
+	   <div class="top">
+	   	<span></span>
+	   	<span>定期·懒人计划</span>
+	   	<span>项目详情</span>
+	   	<img src="img/lingqian/images/2_03.png"/>
+	   </div>
+	   <div class="main">
+	   	  <p>懒人计划2月期907822</p>
+	   	  <span>8.50</span>
+	   	  <span>%</span>
+	   	  <span>年化收益率</span>
+	   	  <ul class="mainUl">
+	   	  	<li>首投加息</li>
+	   	  	<li>明星产品</li>
+	   	  	<li>小懒贴息</li>	   	  	
+	   	  </ul>
+	   	  <a>
+	   	  	目前已经有<span>78</span>人加入计划<p><span></span></p>
+	   	  </a>
+	   	  <div class="mainDiv">
+	   	  	<img src="img/lanren/images/lr1_06.png"/>
+	   	  </div>
+	   </div>
+	   <div class="xiangmu">
+	   	  <ul class="xiangmuTou">
+	   	  	<li><span class="xiangmuTou-li-span">
+	   	  	产品要素
+	   	  	</li></span>
+	   	  	<li><span>
+	   	  	项目描述
+	   	  	</li></span>
+	   	  	<li><span>
+	   	  	风险控制
+	   	  	</li></span>
+	   	  	<li><span>
+	   	  	还款计划
+	   	  	</li></span>
+	   	  </ul>
+	   	  <ul class="xiangmuBody">
+	   	  	<li>
+	   	  		<p>
+	   	  			<span>预计万元收益 (元)</span>
+	   	  			<span>137.40</span>
+	   	  		</p>
+	   	  		<p>
+	   	  			<span>项目期限 (天)</span>
+	   	  			<span>59</span>
+	   	  		</p>
+	   	  		<p>
+	   	  			<span>项目剩余金额 (元)</span>
+	   	  			<span>1,057,400.00</span>
+	   	  		</p>
+	   	  		<p>
+	   	  			<span>还款方式 (元)</span>
+	   	  			<span>按月付息，到息还本</span>
+	   	  		</p>
+	   	  		<p>
+	   	  			<span>启息时间 (元)</span>
+	   	  			<span>投资启息</span>
+	   	  		</p>
+	   	  		<p>
+	   	  			<span>投资要求 (元)</span>
+	   	  			<span>100启投，整数倍投资</span>
+	   	  		</p>
+	   	  	</li>
+	   	  	<li></li>
+	   	  	<li></li>
+	   	  	<li></li>
+	   	  </ul>
+	   </div>
+	   <a class="end">
+	   	 马上投资
+	   </a>
+	 </div>	
+	</body>
+</html>

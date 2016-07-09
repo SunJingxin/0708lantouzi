@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+ <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+ <title>懒投资</title>
+<script>
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = (clientWidth/16).toFixed(1) + 'px';
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+        //640px时1rem是40px
+    </script>
+    <!--header footer-->
+</head>
+<style type="text/css">
+.top{
+  width: 16rem;
+  height: 2.25rem;
+  background-color: #232628;
+  /*text-align: center;*/
+  line-height: 2.25rem;
+  color: #ffffff;
+}
+.top span{
+  display: inline-block;
+}
+.top span:nth-of-type(1){
+  width: 0.65rem;
+  height: 0.65rem;
+  border-top:0.15rem solid #ffffff;
+  border-right:0.15rem solid #ffffff;
+  transform: rotate(-135deg);
+  display: block;
+  float: left;
+  margin: 0.7rem 0 0 0.425rem;
+}
+.top span:nth-of-type(3){
+  margin-left:2rem;
+}
+.top img{
+  width: 1.2rem;
+  height: 1.2rem;
+  float: right;
+  margin:0.5rem 0.7rem 0 0 ; 
+}
+.main{
+  width: 16rem;
+  min-height:1rem;
+
+}
+.main ul{
+  display: flex;
+  height: 2.0rem;
+  line-height: 2.0rem;
+}
+.main ul li{
+  flex-grow: 1;
+  font-size:  0.705rem;
+  color: #666666;
+  text-align: center;
+  border-bottom: 0.05rem solid #ffffff;
+}
+.main ul .mainUlLi{
+  color: #FF6633;
+  border-bottom: 0.1rem solid #FF6633;
+}
+.mainBody{
+  width: 16rem;
+  height: 1rem;
+}
+.mainBody img{
+  width: 16rem;
+}
+
+.end{
+  width: 16rem;
+  height: 2.6rem;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0; 
+}
+.end a{
+  width: 6.325rem;
+  height: 1.7rem;
+  background-color: #ffffff;
+  border: 0.05rem solid #FF6633;
+  border-radius:0.2rem;
+  margin-top: 0.45rem;
+  text-align: center;
+  line-height: 1.7rem;
+  font-size: 0.75rem;
+}
+.end a:nth-of-type(2){ 
+	background-color: #FF6633;
+	color: #FFFFFF;
+
+}
+</style>
+	<body>
+	  <div class="bigBox">
+	    <div class="top">
+	      <span></span>
+	      <span>返回</span>
+	      <span>安全保障</span>
+	      <img src="img/lingqian/images/2_03.png" />
+	    </div>
+	    <div class="main">
+	      <ul>
+	        <li class="mainUlLi">安全保障</li>
+	        <li>产品介绍</li>
+	        <li>关于我们</li>
+	        <li>媒体报道</li>
+	      </ul>
+	      <div class="mainBody">
+	      	<img src="img/images/lijiliaojie_02.png" />
+	      	<img src="img/images/liaojiexiangqing_02.png" />
+	      </div>
+	    </div>
+	    <div class="end">
+	      <a href="#">登录</a>
+	      <a href="#">注册领取红包</a>
+	    </div>
+	  </div>
+	</body>
+</html>

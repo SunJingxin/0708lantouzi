@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+ <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+ <title>懒投资</title>
+<script>
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = (clientWidth/16).toFixed(1) + 'px';
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+        //640px时1rem是40px
+    </script>
+    <!--header footer-->
+</head>
+<style type="text/css">
+body{
+  background-color: #ffffff;
+}
+.top{
+  width: 16rem;
+  height: 2.25rem;
+  background-color: #232628;
+  text-align: center;
+  line-height: 2.25rem;
+  font-size: 0;
+}
+.top span{
+  display: inline-block;
+  float: left;
+  color: #ffffff;
+  font-size: 0.8rem;
+  margin-left: 0.425rem; 
+}
+.top img{
+  width: 1.2rem;
+  height: 1.2rem;
+  float: right;
+  margin:0.5rem 0.7rem 0 0 ; 
+}
+.top span:nth-of-type(2){
+  font-size: 0.85rem;
+  font-weight: 800;
+  margin-left: 5.6rem; 
+}
+.form1{
+  padding: 0 0.75rem;
+  min-height: 1rem;
+  position: relative;
+}
+.formTop,.formTop1{
+  height: 3.5rem;
+  border-bottom:0.03rem solid #eeeeee;
+  overflow: hidden;
+  font-size: 0;
+} 
+.formTop img,.formTop1 img{
+  width: 0.75rem;
+  height: 0.85rem;
+  margin:2.05rem 0 0 0.475rem;
+  float: left;
+}
+.formTop input,.formTop1 input{
+  display: block;
+  float: left;
+  width: 10rem;
+  height: 2rem;
+  font-size: 0.65rem;
+  border: none;
+  margin-left:0.4rem;
+  margin-top: 1.5rem
+}
+.form1 p {
+  font-size: 0.575rem;
+  color: #555555;
+  text-align: center;
+  height: 0.575rem;
+  margin-top: 1.05rem;
+
+}
+.form1 p span{
+  display: inline;
+  color: #FB7540;
+}
+.form1 button{
+  height: 2.0rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  background-color: #FB7540;
+  color: #ffffff;
+  text-align: center;
+  line-height: 2.0rem;
+  font-size: 0.875rem;
+  margin-top: 1.05rem;
+  border: none; 
+}
+.form1 .yanzheng{
+  position: absolute;
+  top: 4.3rem;
+  right: 0;
+  width: 6.55rem;
+  height: 2.85rem;
+  background-color: #CACACA;
+  text-align: center;
+  line-height: 2.85rem;
+  font-size: 0.625rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+.end {
+  display: block;
+  font-size: 0.65rem;
+  color: #555555;
+  text-align: center;
+  margin-top: 1.175rem;
+}
+</style>
+	<body>
+	  <div class="bigBox">
+	    <div class="top">
+	      <span>取消</span>
+	      <span>注册</span>
+        <a href="">
+          <img src="img/denglu/images/IMG_4677_03.png" />
+        </a>
+	    </div>
+	    <form class="form1">
+	      <div class="formTop">
+	      	<img src="img/images/zhuce-(2)_03.png" />
+	      	<input type="text" placeholder="请输入常用手机号"/>
+	      </div>
+	      <div class="formTop1">
+	      	<img src="img/images/zhuce-(2)_06.png" />
+	      	<input type="text" placeholder="请输入右图验证码"/>
+	      </div>
+	      <p>我已阅读并同意<span>《服务协议》</span>及《隐私条款》</p>
+	      <button>获取验证码</button>
+          <div class="yanzheng">
+          	点击获取验证码
+          	<!-- <img /> -->
+          </div>
+	    </form>
+	    <a href="#" class="end">已有账号？去登录</a>
+	  </div>
+	</body>
+</html>

@@ -1,10 +1,10 @@
 console.log("controllers.js");
-//懒人计划的控制器
+//懒人计划的控制器-----------------------------------------------------------------------------------------------
 app.controller("lanrenCtrl",function($scope){
    
 
 })
-//index 页面的控制器
+//index 页面的控制器------------------------------------------------------------------------------------------
 .controller("indexCtrl",function($scope){
     $(".footer a").click(function(e){	
   	if($(this).index()==4){
@@ -66,22 +66,62 @@ app.controller("lanrenCtrl",function($scope){
   })	  
 
 })
-//零钱计划的控制器
+//零钱计划的控制器----------------------------------------------------------------------------------------------------
 .controller("lingqianCtrl",function($scope){
 
 
 })
-//中间部分的控制器
+//中间部分的控制器----------------------------------------------------------------------------------------------------
 .controller("middle0Ctrl",function($scope){
  
  
 })
-//享乐计划的控制器
+//享乐计划的控制器-----------------------------------------------------------------------------------------------------
 .controller("xiangleCtrl",function($scope){
-  
-  
+
+ // 头部轮播
+	$(".topLa").css("left","-100px")
+	var count=0;
+	clearInterval(clear);
+	var clear=setInterval(function(){
+	   count++;
+	   $(".topLa").animate({
+		left:-16*count+"rem",				
+	   },500)
+	   if(count==3){
+	  	count=0;
+	  }
+	  var oLi=$(".top ul li");
+	  for(var i=0;i<oLi.length;i++){
+	  	oLi[i].classname="top-ul-li";	  	
+	  }
+	},1000)
+
+
+  //滑动 变化
+  var conutX1=0;
+  var conutX2=0;
+  $(".bannerView")[0].addEventListener("touchstart",function(e){
+  	 var touchList=e.touches;
+  	 var touchs=touchList[0];
+  	 conutX1=touchs.clientX
+  })
+   $(".bannerView")[0].addEventListener("touchmove",function(e){
+  	 var touchList=e.touches;
+  	 var touchs=touchList[0];
+  	 conutX2=touchs.clientX
+  	 var tu=$(".bannerView")[0]
+  	 tu.style.left=(conutX2-conutX1)/40+"rem"
+  	 if(parseInt(tu.style.left)>=0){
+  	 	tu.style.left=0+"rem";
+  	 }
+  	 if(parseInt(tu.style.left)<=-50){
+  	 	tu.style.left=60+"rem";
+  	 }	 
+  })
+   
 })
-//积分商城的控制器
+//积分商城的控制器----------------------------------------------------------------------------------------------------
 .controller("jifenCtrl",function($scope){
 	
 	
@@ -214,5 +254,8 @@ $.ajax({
    })
   //图片的异步加载
 	 lazyLoad.init();	 
+	 
+	 
+	 
 })
 console.log("controllers.js111");

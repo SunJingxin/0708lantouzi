@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+ <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+ <title>懒投资</title>
+<script>
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = (clientWidth/16).toFixed(1) + 'px';
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+        //640px时1rem是40px
+    </script>
+    <!--header footer-->
+</head>
+<style type="text/css">
+.main{
+  width: 16rem;
+  height: 40rem;
+  background-color: rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+.mainXin{
+  width: 9.85rem;
+  height: 5.05rem;
+  background-color: #ffffff;
+  border-radius:0.3rem;
+  margin: 0 auto;
+  margin-top: 10.75rem;
+  text-align: center;
+  overflow: hidden;
+}
+.mainXin span{
+  font-size: 0.675rem;
+  margin-top: 0.875rem;
+  color: #000000;
+}
+.mainXin a{
+  display: block;
+  width: 3.0rem;
+  height: 1.65rem;
+  border: 0.05rem solid #FB7540;
+  text-align: center;
+  line-height: 1.65rem;
+  font-size: 0.7rem;
+  color: #FB7540;
+  float: left;
+  border-radius:0.2rem;
+  margin:  0.9rem 0 0 1.05rem;
+}
+.mainXin a:nth-of-type(2){
+  background-color: #FB7540;
+  color: #ffffff;
+}
+</style>
+	<body>
+	  <div class="bigBox">
+	    <div class="main">
+	      <div class="mainXin">
+	      	<span>点击拨打联系小懒客服</span>
+	      	<a href="#">取消</a>
+	      	<a href="#">拨打</a>
+	      </div>
+	    </div>
+	  </div>
+	</body>
+</html>

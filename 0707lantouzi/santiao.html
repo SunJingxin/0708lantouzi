@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+ <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+ <title>懒投资</title>
+<script>
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = (clientWidth/16).toFixed(1) + 'px';
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+        //640px时1rem是40px
+    </script>
+    <!--header footer-->
+</head>
+<style type="text/css">
+.main{
+  width: 16rem;
+  min-height:1rem;
+  background-color: #ffffff; 
+}	
+.main a{
+  display: block;
+  width:15.0rem; 
+  height:7.075rem;
+  margin:0.5rem; 
+}
+.main a img{
+  width:15.0rem; 
+  height:7.075rem;
+}
+</style>
+	<body>
+	  <div class="bigBox">
+	  	<div class="main">
+	  	  <a href="#">
+	  	  	<img src="img/images/santiao2.png" />
+	  	  </a>
+	  	  <a href="">
+	  	  	<img src="img/images/santiao1.png" />
+	  	  </a>
+	  	  <a href="">
+	  	  	<img src="img/images/santiao3.png" />
+	  	  </a>
+	  	  <a href="">
+	  	  	<img src="img/images/santiao4.png" />
+	  	  </a>
+	  	</div>
+	  </div>
+	</body>
+</html>
