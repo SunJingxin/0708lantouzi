@@ -9,18 +9,18 @@
 	  		<span>￥0.00</span>
 	  	</p>
 	  	<div class="shouyiDiv">
-	  		<a href="#" class="shouyiDivA1">
+	  		<a href="" class="shouyiDivA1">
 	  			<span>持有金额</span>
 	  			<span>￥0.00</span>
 	  		</a>
-	  		<a href="#" class="shouyiDivA2">
+	  		<a href="" class="shouyiDivA2">
 	  			<span>用户体验金额</span>
 	  			<span>￥0.00</span>
 	  		</a>
 	  	</div>
 	  </div>
 	  <div class="main">
-	  	<a href="#" class="mainATop">
+	  	<a href="" class="mainATop">
 	  		<span></span>
 	  		<span>未使用的体验金</span>
 	  		<span></span>
@@ -28,8 +28,8 @@
 	  		<span>￥</span>
 	  	</a>
 	  	<div class="mainDivTop">
-	  	   <a href="#" >转出</a>
-	       <a href="#" >转入</a>
+	  	   <a  id="zhuanchuBtn">转出</a>
+	       <a  id="zhuanruBtn">转入</a>
 	  	</div>
  	    <ul class="mainUlTop">
  	    	<li class="mainUlTopLi">近7日年化收益率</li>
@@ -40,22 +40,71 @@
  	    </div>
 	  </div>
 	  <div class="end">
-	  	<a href="#">
+	  	<a href="">
 	  	  <img src="img/lingqian/images/6_10.png"/>
 	  	  <p>某宝2倍<span>稳健</span></p>
 	  	</a>
-	  	<a href="#">
+	  	<a href="">
 	  	  <img src="img/lingqian/images/6_08.png"/>
 	  	  <p>投资组合<span>安全</span></p>
 	  	</a>
-	  	<a href="#">
+	  	<a href="">
 	  	  <img src="img/lingqian/images/6_05.png"/>
 	  	  <p>随存随取<span>灵活</span></p>
 	  	</a>
-	  	<a href="#">
+	  	<a href="">
 	  	  <img src="img/lingqian/images/6_12.png"/>
 	  	  <p>全天售卖<span>任性</span></p>
 	  	</a>
-	  </div>	  	
-</div>	
-	
+ </div>	  
+</div>
+<!--点击出来页面-->
+	   <script src="js/baiduTemplate.js"></script>
+	   <div class="DbigBox">
+        <div class="Dtop">
+        	<ul>
+        		<li></li>
+        		<li></li>
+        	</ul>
+        	<span>登录</span>
+        	<img  src="img/denglu/images/IMG_4677_03.png"/>
+        </div>
+        <div id="Dyz">
+        	<form class="form1">
+        		<div class="form1Div1">
+        				 <img src="img/denglu/images/IMG_4677_07.png" />
+        				  <input type="text" placeholder="请输入手机号/用户名/邮箱"/>
+        		</div>
+        		<div class="form1Div2">
+        			 <img src="img/denglu/images/IMG_4677_10.png" />
+        			   <input type="text" placeholder="请输入登录密码"/>
+        		</div>
+        		 <img src="img/denglu/images/IMG_4677_12.png" />
+        		<button>登录</button>
+      	   <div class="yzDiv">
+      	   	  <a href="">忘记密码</a>
+      	   	  <a href="">注册送大礼</a>
+      	   </div>
+        	</form>
+        </div>
+     </div>
+	 </div>
+      <script>
+        var oAs=document.getElementsByTagName("a")
+        for(var i=0;i<oAs.length;i++){
+        	console.log(oAs.length)
+          oAs[i].onclick=function(){
+          	var DbigBox=document.getElementsByClassName("DbigBox")[0];
+	  	  	DbigBox.style.display="block";
+          }
+        }
+	  	var DtopUl=$(".Dtop ul")[0];
+	  	 console.log(DtopUl)
+	  	 console.log(DtopUl[0])
+	  	  DtopUl.onclick=function(){
+	  	  	var DbigBox=document.getElementsByClassName("DbigBox")[0];
+	  	  	DbigBox.style.display="none";
+	  	  }
+	  	 console.log("!!!!")
+	  </script>
+	  

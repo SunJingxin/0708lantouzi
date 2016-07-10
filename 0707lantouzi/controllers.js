@@ -5,7 +5,9 @@ app.controller("lanrenCtrl",function($scope){
 
 })
 //index 页面的控制器------------------------------------------------------------------------------------------
+ 
 .controller("indexCtrl",function($scope){
+	
     $(".footer a").click(function(e){	
   	if($(this).index()==4){
   		$(".header span")[0].innerHTML="积分商城";
@@ -18,7 +20,7 @@ app.controller("lanrenCtrl",function($scope){
   		$(".header img")[0].style.opacity="1";
   		$(".header img")[1].style.opacity="1";
   		if($(this).index()==0){
-  	  $(".header img")[0].style.opacity="0";
+  	  $(".header #fenxiangImg")[0].style.opacity="0";
   	   $(".header img")[1].style.marginRight="-0.8rem";
     	$(".header span")[0].innerHTML="定期·懒人计划";
       }else if($(this).index()==1){
@@ -64,7 +66,45 @@ app.controller("lanrenCtrl",function($scope){
 	 	footerm.style.backgroundColor="#FF9966";
 	  }
   })	  
-
+   //hua
+   	var huaView=document.getElementsByClassName("huaView")[0];
+	  	var conutX1=0;
+	  	var conutX2=0;
+	  	var cha=0;
+        var cun=0;
+        var count=0;
+	  	huaView.style.left="3.275rem";
+	  	 huaView.addEventListener("touchstart",function(e){
+	  	   var touchs=e.touches[0];
+  	        conutX1=touchs.clientX;
+  	        count=1;
+	  	 },false);
+	  	 huaView.addEventListener("touchmove",function(e){	 	  	 	
+	  	   var touchs=e.touches[0];
+  	        conutX2=touchs.clientX; 	        
+  	        cha=(conutX2-conutX1)/40;  	        
+  	        if(count==1){
+  	          count=0;
+  	          cun=parseInt(huaView.style.left)  	          
+  	        }
+  	        else{ 	          
+  	          huaView.style.left=cun+cha+"rem";
+  	          if(parseInt(huaView.style.left)<=-27.175){
+  	          	huaView.style.left="-27.175rem"; 	          	
+  	          }
+  	          if(parseInt(huaView.style.left)>=3.275){
+  	          	huaView.style.left="3.275rem";
+  	          }
+  	        }
+  	        
+	  	 },false);
+	  	 huaView.addEventListener("touchend",function(){
+	  	 	console.log(huaView.style.left);
+	  	 },false)
+	  	 //hua
+	  	 //fenxiang
+	  	 
+	  	 //fenxiang
 })
 //零钱计划的控制器----------------------------------------------------------------------------------------------------
 .controller("lingqianCtrl",function($scope){
@@ -79,24 +119,24 @@ app.controller("lanrenCtrl",function($scope){
 //享乐计划的控制器-----------------------------------------------------------------------------------------------------
 .controller("xiangleCtrl",function($scope){
 
- // 头部轮播
-	$(".topLa").css("left","-100px")
-	var count=0;
-	clearInterval(clear);
-	var clear=setInterval(function(){
-	   count++;
-	   $(".topLa").animate({
-		left:-16*count+"rem",				
-	   },500)
-	   if(count==3){
-	  	count=0;
-	  }
-	  var oLi=$(".top ul li");
-	  for(var i=0;i<oLi.length;i++){
-	  	oLi[i].classname="top-ul-li";	  	
-	  }
-	},1000)
-
+// // 头部轮播
+//	$(".topLa").css("left","-100px");
+//	var count=0;
+//	clearInterval(clear);
+//	var clear=setInterval(function(){
+//	   count++;
+//	   $(".topLa").animate({
+//		left:-16*count+"rem",				
+//	   },500)
+//	   if(count==3){
+//	  	count=0;
+//	  }
+//	  var oLi=$(".top ul li");
+//	  for(var i=0;i<oLi.length;i++){
+//	  	oLi[i].classname="top-ul-li";	  	
+//	  }
+//	},1000)
+//
 
   //滑动 变化
   var conutX1=0;

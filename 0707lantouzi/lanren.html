@@ -79,6 +79,22 @@
   border-top:0.1rem solid  #F87547;
   color: #F87547;
 }
+.zhu{
+  width: 16rem;
+  height: 40rem;
+  position: relative;
+  overflow: hidden;
+}
+.zhuMain{
+	width: 80rem;
+  height: 40rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.zhuMain li{
+	float: left;
+}
 .main{
   width: 16rem;
   min-height: 1rem;
@@ -126,7 +142,7 @@
   height: 2.5rem;
   background-color: #FFFFFF;
   position: absolute;
-  top: 6.1rem;
+  top: 7.1rem;
   left: 0;
   text-align: center;
   font-size: 0;
@@ -227,7 +243,12 @@
 	  		<a>长期猛赚</a>
 	  	</li>
 	  </ul>
-	  <div class="main">
+	<div class="zhu">
+	 <ul class="zhuMain">	 
+	 	
+	 	
+	 	
+	  <li class="main">
 	  	<div class="yuan">
 	  		<span>年化收益率</span>
 	  		<span>8.50</span>
@@ -255,6 +276,123 @@
         </a>
       </div>
       <a href="#" class="end">马上投资</a>
+	  </li>
+	  
+	  
+	  
+	  
+	  <li class="main">
+	  	<div class="yuan">
+	  		<span>年化收益率</span>
+	  		<span>8.50</span>
+	  		<span>%</span><br />
+	  		<img src="img/lanren/images/lr1_03.png" />
+	  	</div>
+	  	<div class="yuanshang">
+	  		<a href="#">首投加息</a>
+	  		<a href="#">明星产品</a>
+	  		<a href="#">小懒投资</a>
+	  		<div class="yuanshang1">
+	  		  <img src="img/lanren/images/lr1_06.png"/>
+	  	    </div>	  		
+	  	</div>	  	
+	  	<div class="e">
+        <a href="#">
+          <span>2</span>
+          <span>个月</span><br />
+          <span>项目期限</span>
+        </a>
+        <a href="#">
+          <span>185.37万</span>
+          <span>元</span><br />
+          <span>项目余额</span>
+        </a>
+      </div>
+      <a href="#" class="end">马上投资</a>
+	  </li>
+	  
+	  
+	  
+	  
+	  <li class="main">
+	  	<div class="yuan">
+	  		<span>年化收益率</span>
+	  		<span>8.50</span>
+	  		<span>%</span><br />
+	  		<img src="img/lanren/images/lr1_03.png" />
+	  	</div>
+	  	<div class="yuanshang">
+	  		<a href="#">首投加息</a>
+	  		<a href="#">明星产品</a>
+	  		<a href="#">小懒投资</a>
+	  		<div class="yuanshang1">
+	  		  <img src="img/lanren/images/lr1_06.png"/>
+	  	    </div>	  		
+	  	</div>	  	
+	  	<div class="e">
+        <a href="#">
+          <span>2</span>
+          <span>个月</span><br />
+          <span>项目期限</span>
+        </a>
+        <a href="#">
+          <span>185.37万</span>
+          <span>元</span><br />
+          <span>项目余额</span>
+        </a>
+      </div>
+      <a href="#" class="end">马上投资</a>
+	  </li>
+	  
+	  
+	  
+	  
+	  <li class="main">
+	  	<div class="yuan">
+	  		<span>年化收益率</span>
+	  		<span>8.50</span>
+	  		<span>%</span><br />
+	  		<img src="img/lanren/images/lr1_03.png" />
+	  	</div>
+	  	<div class="yuanshang">
+	  		<a href="#">首投加息</a>
+	  		<a href="#">明星产品</a>
+	  		<a href="#">小懒投资</a>
+	  		<div class="yuanshang1">
+	  		  <img src="img/lanren/images/lr1_06.png"/>
+	  	    </div>	  		
+	  	</div>	  	
+	  	<div class="e">
+        <a href="#">
+          <span>2</span>
+          <span>个月</span><br />
+          <span>项目期限</span>
+        </a>
+        <a href="#">
+          <span>185.37万</span>
+          <span>元</span><br />
+          <span>项目余额</span>
+        </a>
+      </div>
+      <a href="#" class="end">马上投资</a>
+	  </li>
+	  
+
+	  
+	  
+	  </ul>
 	  </div>
+	<script>
+		$(".nav li").each(function(){
+			$(this).click(function(e){
+				$(".nav li a").attr("class","")
+				$(this).children().attr("class","navLiA")
+				console.log($(this).index())
+				$(".zhuMain").animate({
+					left:-$(this).index()*16+"rem"
+				},500)
+			})
+		})
+	</script>
 	</body>
 </html>

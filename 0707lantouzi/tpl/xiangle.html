@@ -251,4 +251,24 @@
       </div>
 	    </div>	    	
 </div>
- 
+ <script>
+ 	 // 头部轮播
+	$(".topLa").css("left","-100px");
+	var count=0;
+	clearInterval(clear);
+	var clear=setInterval(function(){
+	   count++;
+	   $(".topLa").animate({
+		left:-16*count+"rem",				
+	   },500)
+	   if(count==3){
+	  	count=0;
+	  }
+	  var oLi=$(".top ul li");
+	  for(var i=0;i<oLi.length;i++){
+	  	oLi[i].classname="top-ul-li";	  	
+	  }
+	},1000)
+
+
+ </script>

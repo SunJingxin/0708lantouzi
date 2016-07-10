@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+ <script src="js/jquery.js"></script>
  <title>懒投资</title>
 <script>
         (function (doc, win) {
@@ -23,6 +24,37 @@
     <!--header footer-->
 </head>
 <style type="text/css">
+.top{
+  width: 16rem;
+  height: 2.25rem;
+  background-color: #232628;
+  text-align: center;
+  line-height: 2.25rem;
+  color: #ffffff;
+}
+.top span{
+  display: inline-block;
+}
+.top a span:nth-of-type(1){
+  width: 0.65rem;
+  height: 0.65rem;
+  border-top:0.15rem solid #ffffff;
+  border-right:0.15rem solid #ffffff;
+  transform: rotate(-135deg);
+  display: block;
+  float: left;
+  margin: 0.7rem 0 0 0.425rem;
+}
+.top a span:nth-of-type(2){
+  float: left;
+  color: #FFFFFF;
+}
+.top img{
+  width: 1.2rem;
+  height: 1.2rem;
+  float: right;
+  margin:0.5rem 0.7rem 0 0 ; 
+}
 .main{
   width: 16rem;
   min-height:1rem;
@@ -38,9 +70,107 @@
   width:15.0rem; 
   height:7.075rem;
 }
+.fenxiang{
+width: 16rem;
+height: 30rem;
+background-color: rgba(0,0,0,0.5);
+overflow: hidden;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 999;
+display: none;
+
+}	
+
+.fenxiang a{
+  display: block;
+  width: 4.0rem;
+  height: 4.0rem;
+  border-radius:50%; 
+  background-color: #ffffff;
+  overflow: hidden;
+  position: fixed;
+}
+.fenxiang a:nth-of-type(1){
+/*  position: absolute;*/
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  animation:a1 .180s 0ms linear forwards;
+}
+.fenxiang a:nth-of-type(2){
+  /*position: absolute;*/
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  animation:a2 .180s 100ms linear forwards;
+}
+.fenxiang a:nth-of-type(3){
+  /*position: absolute;*/
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  animation:a33 .180s 200ms linear forwards;
+}
+@keyframes a1{
+	from{
+	  top: 0;
+      right: 0;
+       transform:scale(0)	
+	}
+	to{
+	  top:7.175rem;
+      right: 5.95rem;
+       transform:scale(1)
+	}
+}
+@keyframes a2{
+	from{
+	  top: 0;
+      right: 0;	
+       transform:scale(0)
+	}
+	to{
+	  top:12.175rem;
+      right: 5.95rem;
+       transform:scale(1)
+	}
+}
+@keyframes a33{
+	from{
+	  top: 0;
+      right: 0;
+       transform:scale(0)	
+	}
+	to{
+	  top:17.175rem;
+      right: 5.95rem;
+       transform:scale(1)
+	}
+}
+.fenxiang a img{
+  margin:0.875rem 0 0 1.15rem;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+.fenxiang a span{
+  font-size: 0.4rem;
+  text-align: center;
+  color: #909090;
+  margin-top:0.05rem; 
+}
 </style>
 	<body>
 	  <div class="bigBox">
+	  	<div class="top">
+	  	 <a href="index.html">
+	      <span></span>
+	      <span>返回</span>
+	     </a>
+	      <span>发现</span>
+	      <img src="img/lingqian/images/2_03.png" id="fenxiangImg"/>
+	    </div>
 	  	<div class="main">
 	  	  <a href="#">
 	  	  	<img src="img/images/santiao2.png" />
@@ -55,6 +185,30 @@
 	  	  	<img src="img/images/santiao4.png" />
 	  	  </a>
 	  	</div>
+	  <div class="fenxiang">
+      <div class="fenxiangXin">
+	   <a class="pengyou" href="#">
+	    <img src="img/images/pengyou.png" />
+	    <span>朋友圈</span>
+	  </a>
+	  <a class="weixin" href="#">
+	  	<img src="img/images/weixin.png" />
+	  	<span>微信</span>
+	  </a>
+	  <a class="weibo" href="#">
+	    <img src="img/images/weibo.png" />
+	    <span>微博</span>
+	  </a>
+	  </div>   	
+   </div>
 	  </div>
+	 <script>
+   $("#fenxiangImg").click(function(){
+   	$(".fenxiang").css("display","block")
+   })
+   $(".fenxiang").click(function(){
+   	$(this).css("display","none")
+   })
+	 </script>
 	</body>
 </html>

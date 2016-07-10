@@ -6,6 +6,7 @@
  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
  <link rel="stylesheet" type="text/css" href="css/footer.css"/>
  <link rel="stylesheet" type="text/css" href="css/top.css"/>
+ <script src="js/baiduTemplate.js"></script>
  <title>懒投资</title>
 <script>
         (function (doc, win) {
@@ -26,14 +27,16 @@
 </head>
 <body>
   <div class="header" ng-controller="indexCtrl">
-	   <ul class="header-ul">
+  	  <a href="santiao.html">
+  	  <ul class="header-ul">
 	  	<li></li>
 	  	<li></li>
 	    <li></li>
 	   </ul>
+  	   </a>
 	  <span>定期·懒人计划</span>
-	  <img src="img/lingqian/images/2_03.png"/>
-	  <img src="img/lanren/images/1_03.png"/>
+	  <img src="img/lingqian/images/2_03.png" id="fenxiangImg"/>
+	  <img src="img/lanren/images/1_03.png" id="huaImg"/>
    </div>    
    <div id="tc" ng-view>
      <!--路由的内容-->
@@ -62,10 +65,59 @@
 	 		<span>积分商城</span>
 	 	</a>
    </div>
+   <div class="hua">
+     	<div class="huaView">
+	      	<a href="#">
+	      	  <img src="img/images/hua1.png" />
+	      	</a>
+	      	<a href="#">
+	      	  <img src="img/images/hua2.png" />
+	      	</a>
+	      	<a href="#">
+	      	  <img src="img/images/hua3.png" />
+	      	</a>
+	      	<a href="#">
+	      	  <img src="img/images/hua4.png" />
+	      	</a>
+	     </div>  	
+   </div>
+   <div class="fenxiang">
+      <div class="fenxiangXin">
+	   <a class="pengyou" href="#">
+	    <img src="img/images/pengyou.png" />
+	    <span>朋友圈</span>
+	  </a>
+	  <a class="weixin" href="#">
+	  	<img src="img/images/weixin.png" />
+	  	<span>微信</span>
+	  </a>
+	  <a class="weibo" href="#">
+	    <img src="img/images/weibo.png" />
+	    <span>微博</span>
+	  </a>
+	  </div>   	
+   </div>
  <script src="js/jquery.js"></script>
  <script src="js/angular.min.js"></script>
  <script src="js/angular-route.min.js"></script>
    <script src="app.js"></script>
    <script src="controllers.js"></script>
+   <script>
+   //hua
+    $("#huaImg").click(function(){
+  	 $(".hua").css("display","block")
+    })
+   $(".hua").click(function(){
+   	 $(this).css("display","none")
+   })
+   //fenxiang
+   $("#fenxiangImg").click(function(){
+   	$(".fenxiang").css("display","block")
+   })
+   $(".fenxiang").click(function(){
+   	$(this).css("display","none")
+   })
+   </script>
+   
    </body>
 </html>

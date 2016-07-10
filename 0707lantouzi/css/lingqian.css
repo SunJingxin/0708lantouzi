@@ -177,3 +177,125 @@
   margin-top:0.35rem;
   
 }
+/*点击出来*/
+.DbigBox {
+  width: 16.0rem;
+  min-height: 40rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 199;
+  display: none;
+}
+.DbigBox .Dtop{
+  width: 16rem;
+  height: 2.225rem;
+  background-color:#232628; 
+  overflow: hidden;
+  text-align: center;
+  line-height: 2.225rem;
+}
+.DbigBox .Dtop ul{
+  margin: 0.675rem 0 0 0.55rem;
+  float: left;
+}
+.DbigBox .Dtop ul li{
+  width: 1.105rem;
+  height: 0.075rem;
+  margin-bottom: 0.7rem;
+  background-color: #ffffff;
+}
+.DbigBox .Dtop ul li:nth-of-type(1){
+  transform: rotate(-45deg);
+  transform-origin: right;
+}
+.DbigBox .Dtop ul li:nth-of-type(2){
+  transform: rotate(45deg);
+  transform-origin: right;
+}
+.DbigBox .Dtop span{
+  color: white;
+  display: inline;
+  font-size: 0.8rem;
+}
+.DbigBox .Dtop img{
+  float: right;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin:0.475rem 0.675rem 0 0; 
+}
+.DbigBox .form1{
+  margin: 0 0.75rem;
+  position: relative;
+}
+.DbigBox .form1Div1{
+  overflow: hidden;
+  height: 3.45rem;
+  border-bottom:0.025rem solid #f4f4f4 ;
+}
+.DbigBox .form1Div2{
+  overflow: hidden;
+  height: 3.45rem;
+  border-bottom:0.025rem solid #f4f4f4 ;
+}
+.DbigBox .form1 img{
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.95rem;
+  margin-top:2.0rem; 
+  float: left;
+}
+.DbigBox .form1 img:nth-of-type(3){
+  display: block;
+  width: 1.725rem;
+  height: 0.85rem;
+  position: absolute;
+  top: 5.55rem;
+  right:0.01rem;
+}
+.DbigBox .form1 input[type="text"]{
+  margin-top: 1.5rem;
+  width: 12.0rem;
+  height: 2rem;
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+  border: none;
+}
+.DbigBox .form1 button{
+  width: 14.5rem;
+  height: 2.05rem;
+  background-color: #FB7540;
+  border-radius: 0.175rem;
+  margin-top: 1.75rem;
+  font-size: 0.825rem;
+  color: #ffffff;
+  line-height: 2.05rem;
+  text-align: center; 
+  border:none; 
+}
+.DbigBox .form1>img{
+  position: absolute;
+  top: 5.525rem;
+  left: 12.85rem;
+  margin-top: 0.0rem;
+  width: 1.725rem;
+  height: 0.85rem;
+}
+.DbigBox .yzDiv{
+  margin-top: 1.15rem;
+  font-size: 0rem;
+  text-align: center;
+}
+.DbigBox .yzDiv a {
+  display: inline-block;
+  font-size: 0.65rem;
+  height: 0.75rem;
+  line-height: 0.75rem;
+  margin-left: 0.8rem;
+}
+.DbigBox .yzDiv a:nth-of-type(1){
+  border-right: 0.05rem solid #EEEEEE;
+  /*margin-right: 0.8rem;*/
+  padding-right:0.8rem; 
+}

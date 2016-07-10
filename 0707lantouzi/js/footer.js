@@ -58,4 +58,6 @@
 	 if($(this).index()!=2){
 	 	footerm.style.backgroundColor="#FF9966";
 	  }
-  })	  
+  })	 
+  
+console.log("hua")
